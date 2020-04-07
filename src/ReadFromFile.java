@@ -14,6 +14,7 @@ public class ReadFromFile {
             this.fileName = fileName;
         }
 
+        //Геттер выдающий строку из файла
         public String getLineFromFile  () throws FileNotFoundException {
             File file = new File(directoryToFile+fileName);
             Scanner scannerInR = new Scanner(file);

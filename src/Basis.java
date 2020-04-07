@@ -7,34 +7,23 @@ public class Basis {
 
         //задаем путь и имя входного файла
         String pathToInputFile = "E:\\Java\\";
-        String nameOfInputFile = "inputFile";
+        String nameOfInputFile = "inputFile.txt";
 
-
+        //информационное сообщение после запуска программы
         System.out.println("Поместите файл под именем " + nameOfInputFile + ", содержащий пример,  в каталог " + pathToInputFile + " и нажмите Enter");
+
+        /* //Задержка перед чтением из файла
         Scanner scanner = new Scanner(System.in);
         String preInputEnter = scanner.nextLine();
         scanner.close();
+         */
 
+        //создаем объект класс ReadFromFile
+        ReadFromFile lineFromFile = new ReadFromFile(pathToInputFile, nameOfInputFile);
 
-       ReadFromFile lineFromFile = new ReadFromFile(pathToInputFile, nameOfInputFile);
-      // String gettedLine = lineFromFile.getLine();
-
-
+        //выводим результат работы метода getLineFromFile объекта lineFromFile
         System.out.println("То, что прочитано из файла: "+lineFromFile.getLineFromFile());
 
-       // System.out.println("DirFrFi: "+lineFromFile.getDirectoryToFile());
-        //System.out.println("Name File: "+lineFromFile.getFileName());
-        //System.out.println("File "+lineFromFile.getFile());
-
-        /*
-        String path = pathToInputFile + nameOfInputFile;
-        File file = new File(path);
-
-        Scanner scanner1 = new Scanner(file);
-        String line = scanner1.nextLine();
-        scanner1.close();
-        System.out.println("То, что прочитано из файла: " + line);
-        */
     }
 
 
